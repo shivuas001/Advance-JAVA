@@ -6,12 +6,22 @@ public class ExceptionHandling {
 		
 		int i = 0;
 		int j = 0;
-		j=18/i;
+
+//here we use try and catch block to handle this arithmetic	runtime error.
+//in try block it will try to execute if it throws an error catch block will be executed by excepting an error by object from try block
+//if try block does not get an error it will ignore execution of catch block.catch block execute only when try throws an error.
+		
+		try
+		{
+			j=18/i;
+		}
+		catch(Exception e)
+		{
+			System.out.println("there is some error");
+		}
 		
 		System.out.println(j);
-		
-	//In this case there is an arithmetic runtime error. but stops execution of code,
-	//so we need to handle this runtime exception to execute further program
+	
 		
 		System.out.println("hello");
 	}
