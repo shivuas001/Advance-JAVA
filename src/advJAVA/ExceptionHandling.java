@@ -1,5 +1,17 @@
 package advJAVA;
 
+
+//To create our own custom Exception we create a class of it and constructor and class should extend the parent Exception class
+//string because from custom Exception we sending a string message so we call super class to handle.
+
+class ShivaKumarException extends Exception
+{
+	public ShivaKumarException(String string)
+	{
+		super(string);
+	}
+}
+
 public class ExceptionHandling {
 
 	public static void main(String[] args) {
@@ -10,13 +22,11 @@ public class ExceptionHandling {
         try
         {
         	j=18/i;
-       //here we are trying to create an exception by using throw keyword.
-       //here 18/20 will gives zero and catch block does not execute so we only create exception by throw keyword.
         	if(j==0)
-        	throw new ArithmeticException();
+        	throw new ShivaKumarException("i dont want to print Zero");
         }
 
-        catch(ArithmeticException e)
+        catch(ShivaKumarException e)
         {
         	System.out.println("your dividing by zero" + e);
         }
